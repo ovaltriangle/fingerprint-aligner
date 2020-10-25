@@ -10,29 +10,29 @@
 #include <malloc.h>
 
 void Aligner::align_genomes_bulk(const size_t &starting_index, const size_t &amount) {
-    assert(starting_index + amount <= query_seqs.size());
+    assert(starting_index + amount <= queries.size());
 
     for (std::size_t i {starting_index}; i < (starting_index + amount); ++i) {
+        /// Report the amount of genomes processed
+        std::cout << "\r[" << ++counter << '/' << queries.size() << ']';
+        std::cout.flush();
+
         /// Construct a Query object
-        Query query {&reference, query_seqs.at(i), c_gap, protein_threshold, similarity_threshold, weights};
+        Query *query {&queries.at(i)};
 
         /// Align the Query object
-        query.search_proteins();
-        query.search_islands();
+        query->search_proteins();
+        query->search_islands();
 
         /// Finalize the Query sequence
-        finalize_query(query);
-        query_seqs.at(i).second = query.sequence;
-        
-        /// Report the amount of genomes processed
-        std::cout << "\r[" << ++counter << '/' << query_seqs.size() << ']';
-        std::cout.flush();
+        finalize_query(*query);
+        queries.at(i).name = query->sequence;
     }
 }
 
 void Aligner::parallel_aligner(const unsigned short &threads_number) {
     // CHECK: std::threads or std::async?
-    std::size_t genomes_amount {query_seqs.size()};
+    std::size_t genomes_amount {queries.size()};
     if (threads_number > 0) {
         unsigned short thread_n {static_cast<unsigned short>((threads_number > genomes_amount) ? genomes_amount : threads_number)};
         std::thread threading[thread_n];
@@ -83,12 +83,17 @@ void Aligner::finalize_query(Query &query) const {
     } /// If it is a whole island, we don't need to do anything - it has already been done
 }
 
+void Aligner::finalize_ref() {
+    /// Pad the reference's sequence
+    reference.sequence = std::string(reference.start_pad, c_gap) + reference.sequence + std::string(reference.end_pad, c_gap);
+}
+
 void Aligner::snps_find(const size_t &index) {
-    assert(index < query_seqs.size());
+    assert(index < queries.size());
     /// Point to the sequences we evaluate
-    std::string *query_ptr {&query_seqs.at(index).first}, *ref_ptr {&reference.sequence};
+    std::string *query_ptr {&queries.at(index).sequence}, *ref_ptr {&reference.sequence};
     /// Point to the name of the query sequence
-    std::string *name {&query_seqs.at(index).second};
+    std::string *name {&queries.at(index).name};
 
     /// Calculate proper limits
     auto pred = [](const auto &c) { return c != '-'; };
@@ -112,17 +117,19 @@ void Aligner::snps_find(const size_t &index) {
 }
 
 void Aligner::snps_bulk(const size_t &starting_index, const size_t &amount) {
-    assert(starting_index + amount <= query_seqs.size());
+    assert(starting_index + amount <= queries.size());
 
     for (std::size_t i {starting_index}; i < (starting_index + amount); ++i) {
+        std::cout << "\r[" << ++counter << '/' << queries.size() << ']';
+        std::cout.flush();
+
         snps_find(i);
-        std::cout << '+';
     }
 }
 
 void Aligner::snps(const unsigned short &threads_number) {
     // CHECK: std::threads or std::async?
-    std::size_t genomes_amount {query_seqs.size()};
+    std::size_t genomes_amount {queries.size()};
     if (threads_number > 0) {
         unsigned short thread_n {static_cast<unsigned short>((threads_number > genomes_amount) ? genomes_amount : threads_number)};
         std::thread threading[thread_n];
@@ -146,6 +153,7 @@ void Aligner::perform_alignment(const unsigned short &threads_number) {
     /// Perform the alignment
     auto align_start {std::chrono::high_resolution_clock::now()};
     std::cout << "Aligning the sequences...\n";
+    counter = 0;
     parallel_aligner(threads_number);
     auto align_end {std::chrono::high_resolution_clock::now()};
     auto align_elapsed {std::chrono::duration_cast<std::chrono::milliseconds>(align_end - align_start)};
@@ -154,17 +162,16 @@ void Aligner::perform_alignment(const unsigned short &threads_number) {
     std::cout << "Clearing up data...\n";
     reference.fragments.clear();
     /// We are left with just the sequences
-    // TODO: Fix all sequences (incl. reference) with reference's padding
-    //  (hint: query to pad = query.start_pad - ref.start_pad)
-    //std::map< std::size_t, std::pair<std::size_t, std::string> >().swap(reference.fragments);
+    finalize_ref();
     /// Write the output on the file
     exit(231);
     std::cout << "Writing the output sequences...\n";
     out_file.clear();
-    out_file.write_results(reference, query_seqs);
+    out_file.write_results(reference, queries);
     /*
     /// Find the SNPs on each query
     std::cout << "Checking for SNPs...\n";
+    counter = 0;
     snps(threads_number);
     /// Write the SNPs on the file
     std::cout << "Writing the SNPs to a file...\n";

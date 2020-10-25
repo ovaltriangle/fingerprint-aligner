@@ -36,7 +36,7 @@ public:
     void write_vsf(const std::vector<std::string> &cat, const std::vector< std::vector<std::string> > &data,
                                 const char &sep = '\t') const;
     void write_comments(const std::vector<std::string> &comments) const;
-    void write_results(const Reference &reference, std::vector< std::pair<std::string, std::string> > &queries) const;
+    void write_results(const Reference &reference, const std::vector<Query> &queries) const;
     // control
     void clear() const { managed_file->clear(); };
 };

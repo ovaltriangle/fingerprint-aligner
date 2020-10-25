@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/astaroth/Documents/CLionProjects/fa/src/aligner/Aligner.cpp" "/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/fa.dir/src/aligner/Aligner.cpp.o"
   "/home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/hirschberg.cpp" "/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/fa.dir/src/aligner/methods/hirschberg.cpp.o"
-  "/home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/needlemanwunsch.cpp" "/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.o"
   "/home/astaroth/Documents/CLionProjects/fa/src/file/File.cpp" "/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/fa.dir/src/file/File.cpp.o"
   "/home/astaroth/Documents/CLionProjects/fa/src/file/FileManager.cpp" "/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/fa.dir/src/file/FileManager.cpp.o"
   "/home/astaroth/Documents/CLionProjects/fa/src/genome/Genome.cpp" "/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/fa.dir/src/genome/Genome.cpp.o"

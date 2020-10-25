@@ -44,11 +44,6 @@ std::map< std::size_t, std::pair<std::size_t, std::string> > Genome::find_orfs()
     ending_position0.clear();
     ending_position1.clear();
     ending_position2.clear();
-    /*
-    std::set<std::size_t>().swap(ending_position0);
-    std::set<std::size_t>().swap(ending_position1);
-    std::set<std::size_t>().swap(ending_position2);
-    */
 
     /// Find the ORFs
     std::map< std::size_t, std::pair<std::size_t, std::string> > orfs;

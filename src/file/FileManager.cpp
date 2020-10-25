@@ -58,11 +58,11 @@ void FileManager::write_comments(const std::vector<std::string> &comments) const
     managed_file->write_comments(comments);
 }
 
-void FileManager::write_results(const Reference &reference, std::vector< std::pair<std::string, std::string> > &queries) const {
+void FileManager::write_results(const Reference &reference, const std::vector<Query> &queries) const {
     /// Write the Reference
     managed_file->write_sequence(reference.name, reference.sequence);
     /// Write all Query genomes
     for (const auto &query: queries) {
-        managed_file->write_sequence(query.first, query.second);
+        managed_file->write_sequence(query.name, query.sequence);
     }
 }

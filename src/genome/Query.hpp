@@ -35,8 +35,8 @@ public:
     : Genome(std::move(ns), protein_threshold), reference(reference), similarity(similarity_threshold), weights(weights), c_gap(c_gap)
     {}
     /// abstract implementation
-    void search_proteins();
-    void search_islands();
+    void search_proteins() override;
+    void search_islands() override;
 };
 
 

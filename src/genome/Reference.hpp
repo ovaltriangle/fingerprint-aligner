@@ -31,8 +31,8 @@ public:
         set_islands_aligned();
     }
     /// abstract implementations
-    void search_proteins();
-    void search_islands() { throw ReferenceIslands(); };
+    void search_proteins() override;
+    void search_islands() override { throw ReferenceIslands(); };
 };
 
 

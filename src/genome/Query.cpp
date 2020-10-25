@@ -87,12 +87,12 @@ void Query::search_proteins() {
     if (start_diff > 0)  // start
         start_pad = start_diff;
     else
-        if (-start_diff > reference->start_pad)
+        if (-start_diff > static_cast<long>(reference->start_pad))
             reference->start_pad = -start_diff;
     if (end_diff > 0)  // end
         end_pad = end_diff;
     else
-        if (-end_diff > reference->end_pad)
+        if (-end_diff > static_cast<long>(reference->end_pad))
             reference->end_pad = -end_diff;
 
     /// Save up some memory

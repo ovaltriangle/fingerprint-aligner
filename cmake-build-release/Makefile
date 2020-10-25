@@ -197,33 +197,6 @@ src/aligner/methods/hirschberg.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fa.dir/build.make CMakeFiles/fa.dir/src/aligner/methods/hirschberg.cpp.s
 .PHONY : src/aligner/methods/hirschberg.cpp.s
 
-src/aligner/methods/needlemanwunsch.o: src/aligner/methods/needlemanwunsch.cpp.o
-
-.PHONY : src/aligner/methods/needlemanwunsch.o
-
-# target to build an object file
-src/aligner/methods/needlemanwunsch.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fa.dir/build.make CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.o
-.PHONY : src/aligner/methods/needlemanwunsch.cpp.o
-
-src/aligner/methods/needlemanwunsch.i: src/aligner/methods/needlemanwunsch.cpp.i
-
-.PHONY : src/aligner/methods/needlemanwunsch.i
-
-# target to preprocess a source file
-src/aligner/methods/needlemanwunsch.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fa.dir/build.make CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.i
-.PHONY : src/aligner/methods/needlemanwunsch.cpp.i
-
-src/aligner/methods/needlemanwunsch.s: src/aligner/methods/needlemanwunsch.cpp.s
-
-.PHONY : src/aligner/methods/needlemanwunsch.s
-
-# target to generate assembly for a file
-src/aligner/methods/needlemanwunsch.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fa.dir/build.make CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.s
-.PHONY : src/aligner/methods/needlemanwunsch.cpp.s
-
 src/file/File.o: src/file/File.cpp.o
 
 .PHONY : src/file/File.o
@@ -428,9 +401,6 @@ help:
 	@echo "... src/aligner/methods/hirschberg.o"
 	@echo "... src/aligner/methods/hirschberg.i"
 	@echo "... src/aligner/methods/hirschberg.s"
-	@echo "... src/aligner/methods/needlemanwunsch.o"
-	@echo "... src/aligner/methods/needlemanwunsch.i"
-	@echo "... src/aligner/methods/needlemanwunsch.s"
 	@echo "... src/file/File.o"
 	@echo "... src/file/File.i"
 	@echo "... src/file/File.s"
