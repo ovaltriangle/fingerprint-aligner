@@ -10,7 +10,6 @@
 #include "../external/cxxopts/cxxopts.hpp"
 
 int main(const int argc, const char** argv) {
-    //sleep(5);
     const std::string version {"1.0"};
 
     const std::string default_out_seq {"out.fa"};

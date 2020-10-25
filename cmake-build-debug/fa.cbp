@@ -94,12 +94,6 @@
 		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/hirschberg.hpp">
 			<Option target="fa"/>
 		</Unit>
-		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/needlemanwunsch.cpp">
-			<Option target="fa"/>
-		</Unit>
-		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/needlemanwunsch.hpp">
-			<Option target="fa"/>
-		</Unit>
 		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/exceptions/Exceptions.hpp">
 			<Option target="fa"/>
 		</Unit>

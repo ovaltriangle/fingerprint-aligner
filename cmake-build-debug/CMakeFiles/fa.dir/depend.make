@@ -4,7 +4,6 @@
 CMakeFiles/fa.dir/src/aligner/Aligner.cpp.o: ../src/aligner/Aligner.cpp
 CMakeFiles/fa.dir/src/aligner/Aligner.cpp.o: ../src/aligner/Aligner.hpp
 CMakeFiles/fa.dir/src/aligner/Aligner.cpp.o: ../src/aligner/methods/hirschberg.hpp
-CMakeFiles/fa.dir/src/aligner/Aligner.cpp.o: ../src/aligner/methods/needlemanwunsch.hpp
 CMakeFiles/fa.dir/src/aligner/Aligner.cpp.o: ../src/exceptions/FileExceptions.hpp
 CMakeFiles/fa.dir/src/aligner/Aligner.cpp.o: ../src/exceptions/GenomeExceptions.hpp
 CMakeFiles/fa.dir/src/aligner/Aligner.cpp.o: ../src/file/File.hpp
@@ -22,17 +21,11 @@ CMakeFiles/fa.dir/src/aligner/methods/hirschberg.cpp.o: ../src/aligner/methods/h
 CMakeFiles/fa.dir/src/aligner/methods/hirschberg.cpp.o: ../src/types/alignment.hpp
 CMakeFiles/fa.dir/src/aligner/methods/hirschberg.cpp.o: ../src/utils/searcher.hpp
 
-CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.o: ../src/aligner/methods/needlemanwunsch.cpp
-CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.o: ../src/aligner/methods/needlemanwunsch.hpp
-CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.o: ../src/types/alignment.hpp
-CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.o: ../src/utils/searcher.hpp
-
 CMakeFiles/fa.dir/src/file/File.cpp.o: ../src/exceptions/FileExceptions.hpp
 CMakeFiles/fa.dir/src/file/File.cpp.o: ../src/file/File.cpp
 CMakeFiles/fa.dir/src/file/File.cpp.o: ../src/file/File.hpp
 
 CMakeFiles/fa.dir/src/file/FileManager.cpp.o: ../src/aligner/methods/hirschberg.hpp
-CMakeFiles/fa.dir/src/file/FileManager.cpp.o: ../src/aligner/methods/needlemanwunsch.hpp
 CMakeFiles/fa.dir/src/file/FileManager.cpp.o: ../src/exceptions/FileExceptions.hpp
 CMakeFiles/fa.dir/src/file/FileManager.cpp.o: ../src/exceptions/GenomeExceptions.hpp
 CMakeFiles/fa.dir/src/file/FileManager.cpp.o: ../src/file/File.hpp
@@ -51,7 +44,6 @@ CMakeFiles/fa.dir/src/genome/Genome.cpp.o: ../src/genome/Genome.hpp
 CMakeFiles/fa.dir/src/genome/Genome.cpp.o: ../src/utils/searcher.hpp
 
 CMakeFiles/fa.dir/src/genome/Query.cpp.o: ../src/aligner/methods/hirschberg.hpp
-CMakeFiles/fa.dir/src/genome/Query.cpp.o: ../src/aligner/methods/needlemanwunsch.hpp
 CMakeFiles/fa.dir/src/genome/Query.cpp.o: ../src/exceptions/GenomeExceptions.hpp
 CMakeFiles/fa.dir/src/genome/Query.cpp.o: ../src/genome/Genome.hpp
 CMakeFiles/fa.dir/src/genome/Query.cpp.o: ../src/genome/Query.cpp
@@ -69,7 +61,6 @@ CMakeFiles/fa.dir/src/genome/Reference.cpp.o: ../src/utils/searcher.hpp
 CMakeFiles/fa.dir/src/main.cpp.o: ../external/cxxopts/cxxopts.hpp
 CMakeFiles/fa.dir/src/main.cpp.o: ../src/aligner/Aligner.hpp
 CMakeFiles/fa.dir/src/main.cpp.o: ../src/aligner/methods/hirschberg.hpp
-CMakeFiles/fa.dir/src/main.cpp.o: ../src/aligner/methods/needlemanwunsch.hpp
 CMakeFiles/fa.dir/src/main.cpp.o: ../src/exceptions/Exceptions.hpp
 CMakeFiles/fa.dir/src/main.cpp.o: ../src/exceptions/FileExceptions.hpp
 CMakeFiles/fa.dir/src/main.cpp.o: ../src/exceptions/GenomeExceptions.hpp

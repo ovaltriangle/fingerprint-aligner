@@ -5,7 +5,6 @@ CMakeFiles/fa.dir/src/aligner/Aligner.cpp.o
  /home/astaroth/Documents/CLionProjects/fa/src/aligner/Aligner.cpp
  /home/astaroth/Documents/CLionProjects/fa/src/aligner/Aligner.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/hirschberg.hpp
- /home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/needlemanwunsch.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/exceptions/FileExceptions.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/exceptions/GenomeExceptions.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/file/File.hpp
@@ -22,18 +21,12 @@ CMakeFiles/fa.dir/src/aligner/methods/hirschberg.cpp.o
  /home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/hirschberg.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/types/alignment.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/utils/searcher.hpp
-CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.o
- /home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/needlemanwunsch.cpp
- /home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/needlemanwunsch.hpp
- /home/astaroth/Documents/CLionProjects/fa/src/types/alignment.hpp
- /home/astaroth/Documents/CLionProjects/fa/src/utils/searcher.hpp
 CMakeFiles/fa.dir/src/file/File.cpp.o
  /home/astaroth/Documents/CLionProjects/fa/src/exceptions/FileExceptions.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/file/File.cpp
  /home/astaroth/Documents/CLionProjects/fa/src/file/File.hpp
 CMakeFiles/fa.dir/src/file/FileManager.cpp.o
  /home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/hirschberg.hpp
- /home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/needlemanwunsch.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/exceptions/FileExceptions.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/exceptions/GenomeExceptions.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/file/File.hpp
@@ -52,7 +45,6 @@ CMakeFiles/fa.dir/src/genome/Genome.cpp.o
  /home/astaroth/Documents/CLionProjects/fa/src/utils/searcher.hpp
 CMakeFiles/fa.dir/src/genome/Query.cpp.o
  /home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/hirschberg.hpp
- /home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/needlemanwunsch.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/exceptions/GenomeExceptions.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/genome/Genome.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/genome/Query.cpp
@@ -70,7 +62,6 @@ CMakeFiles/fa.dir/src/main.cpp.o
  /home/astaroth/Documents/CLionProjects/fa/external/cxxopts/cxxopts.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/aligner/Aligner.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/hirschberg.hpp
- /home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/needlemanwunsch.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/exceptions/Exceptions.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/exceptions/FileExceptions.hpp
  /home/astaroth/Documents/CLionProjects/fa/src/exceptions/GenomeExceptions.hpp

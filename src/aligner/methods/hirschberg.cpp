@@ -10,44 +10,36 @@
 
 namespace hirschberg {
     std::vector<long> nw_score(const std::string &a, const std::string &b, const WeightTable &weights) {
-        auto alen {a.size()}, blen {b.size()};
+        auto alen {a.size() + 1}, blen {b.size() + 1};
 
         /// do something similar: two lines only. at the end, return the last one. this makes it possible to have a
         /// 2*max(n, m) = max(n, m) linear space
-        std::vector<long> score ((++alen) * (++blen));  // score[i][j]  == score[i * alen + j]
+        std::vector<long> score_h (alen), score_l (alen);
 
-        for (std::size_t j {1}; j < alen; ++j) {  // decreasing first row
-            score.at(j) = score.at(j - 1) + weights.insert_cost;
+        for (std::size_t i {1}; i < alen; ++i) {  // decreasing first
+            score_h.at(i) = score_h.at(i - 1) + weights.insert_cost;
         }
 
         for (std::size_t i {1}; i < blen; ++i) {
-            // decreasing first columns
-            score.at(i * alen) = score.at((i - 1) * alen) + weights.delete_cost;
-            // select the b character to compare
-            auto bsel {b.at(i - 1)};
+            // decreasing column
+            score_l.at(0) = score_h.at(0) + weights.delete_cost;
             for (std::size_t j {1}; j < alen; ++j) {
-                // select the a character to compare
-                auto asel {a.at(j - 1)};
+                // take the confronting nts
+                auto asel {a.at(j - 1)}, bsel {b.at(i - 1)};
 
                 // diag
-                auto sub {score.at((i - 1) * alen + (j - 1)) + ((asel == bsel) ? weights.match_cost : weights.substitution_cost)};
+                auto sub {score_h.at(j - 1) + ((asel == bsel) ? weights.match_cost : weights.substitution_cost)};
                 // left
-                auto ins {score.at(i * alen + (j - 1)) + weights.insert_cost};
+                auto ins {score_l.at(j - 1) + weights.insert_cost};
                 // up
-                auto del {score.at((i - 1) * alen + j) + weights.delete_cost};
+                auto del {score_h.at(j) + weights.delete_cost};
 
-                score.at(i * alen + j) = std::max(sub, std::max(ins, del));
+                score_l.at(j) = std::max(sub, std::max(ins, del));
             }
-
+            score_h.swap(score_l);
         }
 
-        return score;
-    }
-
-    std::vector<long> nw_score_h(const std::string &a, const std::string &b, const WeightTable &weights) {
-        auto score {nw_score(a, b, weights)};
-        auto alen {a.size() + 1}, blen {b.size()};
-        return std::vector<long>(score.begin() + alen * blen, score.end());
+        return score_h;
     }
 
     std::pair<std::string, std::string> align(const std::string &a, const std::string &b, const WeightTable &weights) {
@@ -95,7 +87,7 @@ namespace hirschberg {
             std::reverse(aR.begin(), aR.end());
 
             /// CHECK: are these launched together?
-            auto scoreL {nw_score_h(b, aL, weights)}, scoreR {nw_score_h(rev_b, aR, weights)};
+            auto scoreL {nw_score(b, aL, weights)}, scoreR {nw_score(rev_b, aR, weights)};
 
             std::reverse(scoreR.begin(), scoreR.end());
 

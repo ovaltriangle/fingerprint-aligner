@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fa.dir/src/aligner/Aligner.cpp.o"
   "CMakeFiles/fa.dir/src/aligner/methods/hirschberg.cpp.o"
-  "CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.o"
   "CMakeFiles/fa.dir/src/file/File.cpp.o"
   "CMakeFiles/fa.dir/src/file/FileManager.cpp.o"
   "CMakeFiles/fa.dir/src/genome/Genome.cpp.o"

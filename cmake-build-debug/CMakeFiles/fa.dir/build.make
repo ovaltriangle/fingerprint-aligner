@@ -116,22 +116,9 @@ CMakeFiles/fa.dir/src/aligner/methods/hirschberg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fa.dir/src/aligner/methods/hirschberg.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/hirschberg.cpp -o CMakeFiles/fa.dir/src/aligner/methods/hirschberg.cpp.s
 
-CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.o: CMakeFiles/fa.dir/flags.make
-CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.o: ../src/aligner/methods/needlemanwunsch.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/astaroth/Documents/CLionProjects/fa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.o -c /home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/needlemanwunsch.cpp
-
-CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/needlemanwunsch.cpp > CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.i
-
-CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/needlemanwunsch.cpp -o CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.s
-
 CMakeFiles/fa.dir/src/file/File.cpp.o: CMakeFiles/fa.dir/flags.make
 CMakeFiles/fa.dir/src/file/File.cpp.o: ../src/file/File.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/astaroth/Documents/CLionProjects/fa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fa.dir/src/file/File.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/astaroth/Documents/CLionProjects/fa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fa.dir/src/file/File.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fa.dir/src/file/File.cpp.o -c /home/astaroth/Documents/CLionProjects/fa/src/file/File.cpp
 
 CMakeFiles/fa.dir/src/file/File.cpp.i: cmake_force
@@ -144,7 +131,7 @@ CMakeFiles/fa.dir/src/file/File.cpp.s: cmake_force
 
 CMakeFiles/fa.dir/src/file/FileManager.cpp.o: CMakeFiles/fa.dir/flags.make
 CMakeFiles/fa.dir/src/file/FileManager.cpp.o: ../src/file/FileManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/astaroth/Documents/CLionProjects/fa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/fa.dir/src/file/FileManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/astaroth/Documents/CLionProjects/fa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fa.dir/src/file/FileManager.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fa.dir/src/file/FileManager.cpp.o -c /home/astaroth/Documents/CLionProjects/fa/src/file/FileManager.cpp
 
 CMakeFiles/fa.dir/src/file/FileManager.cpp.i: cmake_force
@@ -157,7 +144,7 @@ CMakeFiles/fa.dir/src/file/FileManager.cpp.s: cmake_force
 
 CMakeFiles/fa.dir/src/genome/Genome.cpp.o: CMakeFiles/fa.dir/flags.make
 CMakeFiles/fa.dir/src/genome/Genome.cpp.o: ../src/genome/Genome.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/astaroth/Documents/CLionProjects/fa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/fa.dir/src/genome/Genome.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/astaroth/Documents/CLionProjects/fa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/fa.dir/src/genome/Genome.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fa.dir/src/genome/Genome.cpp.o -c /home/astaroth/Documents/CLionProjects/fa/src/genome/Genome.cpp
 
 CMakeFiles/fa.dir/src/genome/Genome.cpp.i: cmake_force
@@ -170,7 +157,7 @@ CMakeFiles/fa.dir/src/genome/Genome.cpp.s: cmake_force
 
 CMakeFiles/fa.dir/src/genome/Reference.cpp.o: CMakeFiles/fa.dir/flags.make
 CMakeFiles/fa.dir/src/genome/Reference.cpp.o: ../src/genome/Reference.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/astaroth/Documents/CLionProjects/fa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/fa.dir/src/genome/Reference.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/astaroth/Documents/CLionProjects/fa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/fa.dir/src/genome/Reference.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fa.dir/src/genome/Reference.cpp.o -c /home/astaroth/Documents/CLionProjects/fa/src/genome/Reference.cpp
 
 CMakeFiles/fa.dir/src/genome/Reference.cpp.i: cmake_force
@@ -183,7 +170,7 @@ CMakeFiles/fa.dir/src/genome/Reference.cpp.s: cmake_force
 
 CMakeFiles/fa.dir/src/genome/Query.cpp.o: CMakeFiles/fa.dir/flags.make
 CMakeFiles/fa.dir/src/genome/Query.cpp.o: ../src/genome/Query.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/astaroth/Documents/CLionProjects/fa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/fa.dir/src/genome/Query.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/astaroth/Documents/CLionProjects/fa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/fa.dir/src/genome/Query.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fa.dir/src/genome/Query.cpp.o -c /home/astaroth/Documents/CLionProjects/fa/src/genome/Query.cpp
 
 CMakeFiles/fa.dir/src/genome/Query.cpp.i: cmake_force
@@ -196,7 +183,7 @@ CMakeFiles/fa.dir/src/genome/Query.cpp.s: cmake_force
 
 CMakeFiles/fa.dir/src/utils/searcher.cpp.o: CMakeFiles/fa.dir/flags.make
 CMakeFiles/fa.dir/src/utils/searcher.cpp.o: ../src/utils/searcher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/astaroth/Documents/CLionProjects/fa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/fa.dir/src/utils/searcher.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/astaroth/Documents/CLionProjects/fa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/fa.dir/src/utils/searcher.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fa.dir/src/utils/searcher.cpp.o -c /home/astaroth/Documents/CLionProjects/fa/src/utils/searcher.cpp
 
 CMakeFiles/fa.dir/src/utils/searcher.cpp.i: cmake_force
@@ -212,7 +199,6 @@ fa_OBJECTS = \
 "CMakeFiles/fa.dir/src/main.cpp.o" \
 "CMakeFiles/fa.dir/src/aligner/Aligner.cpp.o" \
 "CMakeFiles/fa.dir/src/aligner/methods/hirschberg.cpp.o" \
-"CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.o" \
 "CMakeFiles/fa.dir/src/file/File.cpp.o" \
 "CMakeFiles/fa.dir/src/file/FileManager.cpp.o" \
 "CMakeFiles/fa.dir/src/genome/Genome.cpp.o" \
@@ -226,7 +212,6 @@ fa_EXTERNAL_OBJECTS =
 fa: CMakeFiles/fa.dir/src/main.cpp.o
 fa: CMakeFiles/fa.dir/src/aligner/Aligner.cpp.o
 fa: CMakeFiles/fa.dir/src/aligner/methods/hirschberg.cpp.o
-fa: CMakeFiles/fa.dir/src/aligner/methods/needlemanwunsch.cpp.o
 fa: CMakeFiles/fa.dir/src/file/File.cpp.o
 fa: CMakeFiles/fa.dir/src/file/FileManager.cpp.o
 fa: CMakeFiles/fa.dir/src/genome/Genome.cpp.o
@@ -235,7 +220,7 @@ fa: CMakeFiles/fa.dir/src/genome/Query.cpp.o
 fa: CMakeFiles/fa.dir/src/utils/searcher.cpp.o
 fa: CMakeFiles/fa.dir/build.make
 fa: CMakeFiles/fa.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/astaroth/Documents/CLionProjects/fa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable fa"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/astaroth/Documents/CLionProjects/fa/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable fa"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fa.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
