@@ -25,6 +25,8 @@ private:
     double similarity;
     WeightTable weights;
     char c_gap;
+    /// !constructor
+    std::size_t s_pad_acc {0}, e_pad_acc {0};  // pad accounted for
     /// friends
     friend class Aligner;
     friend class FileManager;

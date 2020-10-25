@@ -95,6 +95,10 @@ void Query::search_proteins() {
         if (-end_diff > static_cast<long>(reference->end_pad))
             reference->end_pad = -end_diff;
 
+    /// Save the padding the query accounts for (!= the required padding)
+    s_pad_acc = std::abs(start_diff);
+    e_pad_acc = std::abs(start_diff);
+
     /// Save up some memory
     orfs.clear();
 

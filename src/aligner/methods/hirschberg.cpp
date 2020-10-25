@@ -123,9 +123,22 @@ namespace hirschberg {
         return {z, w};
     }
 
+    std::pair<std::string, std::string> preprocess(std::string a, std::string b) {
+        /// TODO: Try removing common affix again?
+        if (b.size() < a.size()) {
+            auto diff {a.size() - b.size()};
+            b += std::string(diff, '-');
+        }
+
+        return {a, b};
+    }
+
     double score(const std::string &a, const std::string &b, const WeightTable &weights) {
+        /// Preprocess the strings
+        auto pre {preprocess(a, b)};
+
         /// Perform Hirschberg alignment
-        auto hirsch{align(a, b, weights)};
+        auto hirsch{align(pre.first, pre.second, weights)};
 
         /// Calculate the score of the alignment
         std::size_t score {0};
@@ -143,8 +156,11 @@ namespace hirschberg {
         /// Prepare the returned value
         AlignerResults ar;
 
+        /// Preprocess the strings
+        auto pre {preprocess(a, b)};
+
         /// Perform Hirschberg alignment
-        auto hirsch{align(a, b, weights)};
+        auto hirsch{align(pre.first, pre.second, weights)};
         ar.aligned_a = hirsch.first;
         ar.aligned_b = hirsch.second;
 

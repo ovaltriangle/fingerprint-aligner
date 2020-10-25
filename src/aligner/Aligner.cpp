@@ -26,7 +26,7 @@ void Aligner::align_genomes_bulk(const size_t &starting_index, const size_t &amo
 
         /// Finalize the Query sequence
         finalize_query(*query);
-        queries.at(i).name = query->sequence;
+        queries.at(i).sequence = query->sequence;
     }
 }
 
@@ -51,7 +51,10 @@ void Aligner::parallel_aligner(const unsigned short &threads_number) {
     }
 }
 
+/// CHECK
 void Aligner::finalize_query(Query &query) const {
+    /// Take the amount of padding due to ref
+    auto ref_s_pad {reference.start_pad}, ref_e_pad {reference.end_pad};
     /// This has only to be done if it is not a whole island
     if (not query.is_island) {
         /// Create now the final sequence, to which we will add fragments progressively
@@ -59,6 +62,8 @@ void Aligner::finalize_query(Query &query) const {
 
         /// 1. Pad the start
         new_sequence += std::string(query.start_pad, c_gap);
+        if (ref_s_pad > 0)
+            new_sequence += std::string(ref_s_pad - query.s_pad_acc, c_gap);
 
         /// 2. Merge `fragments` into the new sequence
         auto frag_iter{query.fragments.begin()};
@@ -73,19 +78,16 @@ void Aligner::finalize_query(Query &query) const {
 
         /// 3. Pad the end
         new_sequence += std::string(query.end_pad, c_gap);
+        if (ref_e_pad > 0)
+            new_sequence += std::string(ref_e_pad - query.e_pad_acc, c_gap);
 
         /// 4. Save up some memory by clearing `fragments`
         query.fragments.clear();
 
         /// 5. Assign the sequence
-        query.sequence.swap(new_sequence);
+        query.sequence = new_sequence;
         query.sequence.shrink_to_fit();
     } /// If it is a whole island, we don't need to do anything - it has already been done
-}
-
-void Aligner::finalize_ref() {
-    /// Pad the reference's sequence
-    reference.sequence = std::string(reference.start_pad, c_gap) + reference.sequence + std::string(reference.end_pad, c_gap);
 }
 
 void Aligner::snps_find(const size_t &index) {
@@ -161,10 +163,9 @@ void Aligner::perform_alignment(const unsigned short &threads_number) {
     /// Save up memory by clearing `reference.fragments`
     std::cout << "Clearing up data...\n";
     reference.fragments.clear();
-    /// We are left with just the sequences
-    finalize_ref();
+    /// Fix the reference padding
+    reference.sequence = std::string(reference.start_pad, c_gap) + reference.sequence + std::string(reference.end_pad, c_gap);
     /// Write the output on the file
-    exit(231);
     std::cout << "Writing the output sequences...\n";
     out_file.clear();
     out_file.write_results(reference, queries);
