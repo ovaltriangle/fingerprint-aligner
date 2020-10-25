@@ -1,0 +1,3 @@
+/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/rebuild_cache.dir
+/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/edit_cache.dir
+/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/fa.dir

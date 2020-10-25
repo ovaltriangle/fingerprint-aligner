@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="fa"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/astaroth/Documents/CLionProjects/fa/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/astaroth/Documents/CLionProjects/fa/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/astaroth/Documents/CLionProjects/fa/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="fa">
+				<Option output="/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/fa" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/astaroth/Documents/CLionProjects/fa/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 fa"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="fa/fast">
+				<Option output="/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/fa" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/astaroth/Documents/CLionProjects/fa/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 fa/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/aligner/Aligner.cpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/aligner/Aligner.hpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/hirschberg.cpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/hirschberg.hpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/needlemanwunsch.cpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/needlemanwunsch.hpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/exceptions/Exceptions.hpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/exceptions/FileExceptions.hpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/exceptions/GenomeExceptions.hpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/file/File.cpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/file/File.hpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/file/FileManager.cpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/file/FileManager.hpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/file/formats/FASTA.hpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/file/formats/SNPS.hpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/genome/Genome.cpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/genome/Genome.hpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/genome/Query.cpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/genome/Query.hpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/genome/Reference.cpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/genome/Reference.hpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/main.cpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/types/alignment.hpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/utils/searcher.cpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/utils/searcher.hpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/src/utils/threader.hpp">
+			<Option target="fa"/>
+		</Unit>
+		<Unit filename="/home/astaroth/Documents/CLionProjects/fa/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
