@@ -15,8 +15,8 @@ In the folders `cmake-build-debug` and `cmake-build-release` you can find the pr
 ## Building
 Clone the project on your machine, then build it by running `make` inside one of the build folders.
 ```
-git clone https://github.com/<name>/fa.git
-cd fa/cmake-build-release
+git clone https://github.com/ovaltriangle/fingerprint-aligner.git
+cd fingerprint-aligner/cmake-build-release
 make
 ```
 
@@ -64,4 +64,11 @@ fa -r reference.fasta -q queries.fasta -t 6
 
 # Align the sequences utilising 6 threads and custom settings
 fa -r reference.fasta -q queries.fasta -o result.fasta -t 6 -p 90 -s 0.95 -w -5,-5,-3,2
+```
+
+## Working with SARS-CoV-2 examples
+Inside the `examples` directory you can see some files which can be used to test the software. For example:
+```
+# Align 726 sequences of SARS-CoV-2 genomes against the reference
+fa -r ../examples/sars-reference.fa -q ../examples/italian_highcov_726.fasta -o ../examples/out.fasta -t 10
 ```
