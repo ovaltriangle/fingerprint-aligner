@@ -15,7 +15,7 @@ In the folders `cmake-build-debug` and `cmake-build-release` you can find the pr
 ## Building
 Clone the project on your machine, then build it by running `make` inside one of the build folders.
 ```
-git clone https://github.com/<name>/fa.git
+git clone https://github.com/ovaltriangle/fingerprint-aligner.git
 cd fa/cmake-build-release
 make
 ```
