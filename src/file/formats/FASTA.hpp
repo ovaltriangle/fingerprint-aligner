@@ -22,7 +22,7 @@ class FASTA : public File
 {
 public:
     explicit FASTA(std::string filename)
-    : File(std::move(filename), '#', '-', '>', 81)
+    : File(std::move(filename), '#', '-', '>', 60)
     {};
 };
 

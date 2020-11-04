@@ -4,15 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/astaroth/Documents/CLionProjects/fa/src/aligner/Aligner.cpp" "/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/fa.dir/src/aligner/Aligner.cpp.o"
-  "/home/astaroth/Documents/CLionProjects/fa/src/aligner/methods/hirschberg.cpp" "/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/fa.dir/src/aligner/methods/hirschberg.cpp.o"
-  "/home/astaroth/Documents/CLionProjects/fa/src/file/File.cpp" "/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/fa.dir/src/file/File.cpp.o"
-  "/home/astaroth/Documents/CLionProjects/fa/src/file/FileManager.cpp" "/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/fa.dir/src/file/FileManager.cpp.o"
-  "/home/astaroth/Documents/CLionProjects/fa/src/genome/Genome.cpp" "/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/fa.dir/src/genome/Genome.cpp.o"
-  "/home/astaroth/Documents/CLionProjects/fa/src/genome/Query.cpp" "/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/fa.dir/src/genome/Query.cpp.o"
-  "/home/astaroth/Documents/CLionProjects/fa/src/genome/Reference.cpp" "/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/fa.dir/src/genome/Reference.cpp.o"
-  "/home/astaroth/Documents/CLionProjects/fa/src/main.cpp" "/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/fa.dir/src/main.cpp.o"
-  "/home/astaroth/Documents/CLionProjects/fa/src/utils/searcher.cpp" "/home/astaroth/Documents/CLionProjects/fa/cmake-build-release/CMakeFiles/fa.dir/src/utils/searcher.cpp.o"
+  "/home/astaroth/Documents/CLionProjects/fa.old/src/aligner/Aligner.cpp" "/home/astaroth/Documents/CLionProjects/fa.old/cmake-build-release/CMakeFiles/fa.dir/src/aligner/Aligner.cpp.o"
+  "/home/astaroth/Documents/CLionProjects/fa.old/src/aligner/methods/hirschberg.cpp" "/home/astaroth/Documents/CLionProjects/fa.old/cmake-build-release/CMakeFiles/fa.dir/src/aligner/methods/hirschberg.cpp.o"
+  "/home/astaroth/Documents/CLionProjects/fa.old/src/file/File.cpp" "/home/astaroth/Documents/CLionProjects/fa.old/cmake-build-release/CMakeFiles/fa.dir/src/file/File.cpp.o"
+  "/home/astaroth/Documents/CLionProjects/fa.old/src/file/FileManager.cpp" "/home/astaroth/Documents/CLionProjects/fa.old/cmake-build-release/CMakeFiles/fa.dir/src/file/FileManager.cpp.o"
+  "/home/astaroth/Documents/CLionProjects/fa.old/src/genome/Genome.cpp" "/home/astaroth/Documents/CLionProjects/fa.old/cmake-build-release/CMakeFiles/fa.dir/src/genome/Genome.cpp.o"
+  "/home/astaroth/Documents/CLionProjects/fa.old/src/genome/Query.cpp" "/home/astaroth/Documents/CLionProjects/fa.old/cmake-build-release/CMakeFiles/fa.dir/src/genome/Query.cpp.o"
+  "/home/astaroth/Documents/CLionProjects/fa.old/src/genome/Reference.cpp" "/home/astaroth/Documents/CLionProjects/fa.old/cmake-build-release/CMakeFiles/fa.dir/src/genome/Reference.cpp.o"
+  "/home/astaroth/Documents/CLionProjects/fa.old/src/main.cpp" "/home/astaroth/Documents/CLionProjects/fa.old/cmake-build-release/CMakeFiles/fa.dir/src/main.cpp.o"
+  "/home/astaroth/Documents/CLionProjects/fa.old/src/utils/searcher.cpp" "/home/astaroth/Documents/CLionProjects/fa.old/cmake-build-release/CMakeFiles/fa.dir/src/utils/searcher.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

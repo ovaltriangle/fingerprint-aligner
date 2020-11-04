@@ -13,10 +13,8 @@ void Query::search_proteins() {
     auto orfs {find_orfs()};
 
     /// If we don't find any ORF, it is an island
-    if (orfs.empty()) {
-        set_whole_island();
+    if (is_island)
         return;  // exit early
-    }
 
     /*
      * We don't know much about these ORFs. We may get a different ORF from the Reference if:
@@ -62,9 +60,9 @@ void Query::search_proteins() {
                             /// Find gaps in the sequence, before the start and after the end
                             std::size_t gap_before{sequence.rfind(c_gap, query_iter->first)},
                                         gap_after{sequence.find(c_gap, query_iter->second.first)};
-                            /// Calculate the true start and end of the protein block
-                            std::size_t true_start{(gap_before != std::string::npos) ? query_iter->first : 0};
-                            std::size_t true_end{(gap_after != std::string::npos) ? query_iter->second.first : sequence.size() - 1};
+                            /// Calculate the true start and end of the protein block - without the gap
+                            std::size_t true_start{(gap_before != std::string::npos) ? gap_before + 1 : 0};
+                            std::size_t true_end{(gap_after != std::string::npos) ? gap_after - 1 : sequence.size() - 1};
                             /// Update coverage so we skip already covered proteins
                             coverage_start = (true_start < coverage_start) ? true_start : coverage_start;
                             coverage_end = (true_end > coverage_end) ? true_end : coverage_end;
@@ -84,20 +82,20 @@ void Query::search_proteins() {
     long start_diff = static_cast<long>(r_first - q_first);
     long end_diff = static_cast<long>(((reference->sequence.size() - 1) - r_last) - ((sequence.size() - 1) - q_last));
     /// Set the padding correctly
-    if (start_diff > 0)  // start
-        start_pad = start_diff;
-    else
-        if (-start_diff > static_cast<long>(reference->start_pad))
+    if (not is_island) {
+        if (start_diff > 0)  // start
+            start_pad = start_diff;
+        else if (-start_diff > static_cast<long>(reference->start_pad))
             reference->start_pad = -start_diff;
-    if (end_diff > 0)  // end
-        end_pad = end_diff;
-    else
-        if (-end_diff > static_cast<long>(reference->end_pad))
+        if (end_diff > 0)  // end
+            end_pad = end_diff;
+        else if (-end_diff > static_cast<long>(reference->end_pad))
             reference->end_pad = -end_diff;
 
-    /// Save the padding the query accounts for (!= the required padding)
-    s_pad_acc = std::abs(start_diff);
-    e_pad_acc = std::abs(start_diff);
+        /// Save the padding the query accounts for (!= the required padding)
+        s_pad_acc = std::abs(start_diff);
+        e_pad_acc = std::abs(start_diff);
+    }
 
     /// Save up some memory
     orfs.clear();
@@ -119,28 +117,55 @@ void Query::search_islands() {
         sequence.shrink_to_fit();
     } else if (proteins_aligned) {
         /// Iterate over the proteins and check if we have an island between them
-        auto protein_before {fragments.begin()}, protein_after {++fragments.begin()};
+        auto protein_before{fragments.begin()}, protein_after{++fragments.begin()};
         while (protein_after != fragments.end()) {
             /// Set up some variables to be more concise
-            auto pb_end {protein_before->second.first}, pa_begin {protein_after->first};
+            auto pb_end{protein_before->second.first}, pa_begin{protein_after->first};
 
             /// Cut the sequence between the proteins
-            std::string query_bw_proteins {sequence.substr(pb_end, pa_begin - pb_end + 1)};
+            std::string query_bw_proteins{sequence.substr(pb_end, pa_begin - pb_end + 1)};
             /// Cut the sequence from the reference
-            std::string corresponding_reference {reference->sequence.substr(pb_end + start_pad,
-                                                                            pa_begin - pb_end + end_pad + 1)};
+            std::string corresponding_reference{reference->sequence.substr(pb_end + start_pad,
+                                                                           pa_begin - pb_end + end_pad + 1)};
 
             /// Align the sequence and add it to the fragments
-            AlignerResults ar {hirschberg::score_full(corresponding_reference, query_bw_proteins, weights)};
+            AlignerResults ar{hirschberg::score_full(corresponding_reference, query_bw_proteins, weights)};
             fragments.insert(std::make_pair(pb_end + 1, std::make_pair(pa_begin - 1, ar.aligned_b)));
 
             /// Increment the iterators
-            ++protein_before; ++protein_after;
+            ++protein_before;
+            ++protein_after;
         }
+        /// Fix the ends of the sequence
+        fix_ends();
     } else {
         /// In this case, we have something missing or the method has been called too early
         throw QueryNotAligned();
     }
 
     set_islands_aligned();
+}
+
+void Query::fix_ends() {
+    auto start {fragments.begin()->first}, stop {fragments.begin()->second.first};
+
+    if (start != 0) {
+        std::string q_start {sequence.substr(0, start)};
+        std::string r_start {reference->sequence.substr(start_pad, start)};
+
+        q_start = hirschberg::align(r_start, q_start, weights).second;
+
+        // finalizer will not care about margins since it is an island!
+        fragments.insert(std::make_pair(0, std::make_pair(0, q_start)));
+    }
+
+    if (stop != sequence.size() - 1) {
+        std::string q_end {sequence.substr(stop + 1)};
+        std::string r_end {reference->sequence.substr(start_pad + stop, sequence.size() - stop - 1)};
+
+        q_end = hirschberg::align(r_end, q_end, weights).second;
+
+        // finalizer will not care about margins since it is an island!
+        fragments.insert(std::make_pair(sequence.size(), std::make_pair(sequence.size(), q_end)));
+    }
 }

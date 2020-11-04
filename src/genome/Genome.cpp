@@ -66,7 +66,7 @@ std::map< std::size_t, std::pair<std::size_t, std::string> > Genome::find_orfs()
 
         // update the container
         if (not utils::contains(seen_ends, closest)) {
-            orfs.insert(std::make_pair(start, std::make_pair(closest, "")));
+            orfs.insert(std::make_pair(start, std::make_pair(closest + 2, "")));
             seen_ends.push_back(closest);
         }
     }
@@ -74,10 +74,6 @@ std::map< std::size_t, std::pair<std::size_t, std::string> > Genome::find_orfs()
     /// Free up some more memory
     starting_positions.clear();
     ending_positions.clear();
-    /*
-    std::set<std::size_t>().swap(starting_positions);
-    std::set<std::size_t>().swap(ending_positions);
-     */
 
     /// Check if we actually have some ORFs
     if (orfs.empty()) {

@@ -68,7 +68,7 @@ void Aligner::finalize_query(Query &query) const {
         /// 2. Merge `fragments` into the new sequence
         auto frag_iter{query.fragments.begin()};
         while (frag_iter != query.fragments.end()) {
-            if (not frag_iter->second.second.empty()) {  // CHECK: different from .empty()?
+            if (not frag_iter->second.second.empty()) {
                 new_sequence += frag_iter->second.second;
             } else {
                 new_sequence += query.sequence.substr(frag_iter->first, frag_iter->second.first - frag_iter->first + 1);

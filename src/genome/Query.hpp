@@ -39,6 +39,8 @@ public:
     /// abstract implementation
     void search_proteins() override;
     void search_islands() override;
+    /// fix ends
+    void fix_ends();
 };
 
 

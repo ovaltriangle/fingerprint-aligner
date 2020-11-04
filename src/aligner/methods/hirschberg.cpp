@@ -123,11 +123,25 @@ namespace hirschberg {
         return {z, w};
     }
 
-    std::pair<std::string, std::string> preprocess(std::string a, std::string b) {
+    std::pair<std::string, std::string> preprocess(std::string a, std::string b, const WeightTable &weights) {
         /// TODO: Try removing common affix again?
-        if (b.size() < a.size()) {
-            auto diff {a.size() - b.size()};
-            b += std::string(diff, '-');
+        std::size_t position {0};
+        if (b.size() < a.size()) {  /// TODO: Implement a better slider
+            long old_score {LONG_MIN};
+            while (position < a.size()) {
+                std::vector<long> current_score_vector {nw_score(a.substr(position, b.size() - 1), b, weights)};
+                long current_score {current_score_vector.at(utils::argmax(current_score_vector))};
+                if (current_score <= old_score) {
+                    --position;
+                    break;
+                }
+                old_score = current_score;
+                ++position;
+            }
+            std::string new_b {std::string(position, '-')};
+            new_b += b;
+            new_b += std::string(a.size() - new_b.size(), '-');
+            b.swap(new_b);
         }
 
         return {a, b};
@@ -135,7 +149,7 @@ namespace hirschberg {
 
     double score(const std::string &a, const std::string &b, const WeightTable &weights) {
         /// Preprocess the strings
-        auto pre {preprocess(a, b)};
+        auto pre {preprocess(a, b, weights)};
 
         /// Perform Hirschberg alignment
         auto hirsch{align(pre.first, pre.second, weights)};
@@ -157,7 +171,7 @@ namespace hirschberg {
         AlignerResults ar;
 
         /// Preprocess the strings
-        auto pre {preprocess(a, b)};
+        auto pre {preprocess(a, b, weights)};
 
         /// Perform Hirschberg alignment
         auto hirsch{align(pre.first, pre.second, weights)};

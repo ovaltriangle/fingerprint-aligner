@@ -26,13 +26,13 @@ int main(const int argc, const char** argv) {
             ("q,query", "The file containing the query genomes(s).", cxxopts::value<std::string>())
             ("o,output", "Sequence file output. If not specified, '" + default_out_seq + "' will be used.",
              cxxopts::value<std::string>()->default_value(default_out_seq))
-            ("n,snp", "SNPs file output. If not specified, '" + default_out_snps + "' will be used.",
-            cxxopts::value<std::string>()->default_value(default_out_snps))
+//            ("n,snp", "SNPs file output. If not specified, '" + default_out_snps + "' will be used.",
+//            cxxopts::value<std::string>()->default_value(default_out_snps))
             ("t,threads", "The number of threads to use (>1 for multithreading).",
              cxxopts::value<int>()->default_value(default_threads))
             ("p,protein-threshold", "The threshold for the number of nucleotides before a protein is considered so.",
              cxxopts::value<std::size_t>()->default_value(default_p_thresh))
-            ("s,similarity-threshold", "The threshold for the number of nucleotides before a protein is considered so.",
+            ("s,similarity-threshold", "Minimum percentage of identity when comparing two sequences.",
              cxxopts::value<double>()->default_value(default_s_thresh))
             ("w,weights", "The weights to be used in the Hirschberg's NW score calculation"
                           "(insertion, deletion, substitution and match scores). Separate the values with a comma.",
@@ -74,7 +74,8 @@ int main(const int argc, const char** argv) {
         std::string reference {result["r"].as<std::string>()};
         std::string query {result["q"].as<std::string>()};
         std::string output {result["o"].as<std::string>()};
-        std::string snps {result["n"].as<std::string>()};
+        //std::string snps {result["n"].as<std::string>()};
+        std::string snps {"mock.fasta"};
         // threads_num already has the thread number
         std::size_t p_threshold {result["p"].as<std::size_t>()};
         double s_threshold {result["s"].as<double>()};
