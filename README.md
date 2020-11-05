@@ -67,7 +67,7 @@ fa -r reference.fasta -q queries.fasta -o result.fasta -t 6 -p 90 -s 0.95 -w -5,
 ```
 
 ## Working with SARS-CoV-2 examples
-Inside the `examples` directory you can see some files which can be used to test the software. For example:
+Inside the `examples` directory you can see some files which can be used to test the software. For example, when you are inside the `cmake-release-build` folder:
 ```
 # Align 726 sequences of SARS-CoV-2 genomes against the reference
 fa -r ../examples/sars-reference.fa -q ../examples/italian_highcov_726.fasta -o ../examples/out.fasta -t 10
